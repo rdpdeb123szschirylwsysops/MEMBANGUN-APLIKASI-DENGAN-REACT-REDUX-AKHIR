@@ -9,8 +9,9 @@
     "lint": "eslint .",
     "test": "vitest",
     "e2e": "cypress open",
+    "e2e:ci": "cypress run --headless",
     "preview": "vite preview",
-    "ci:test": "vitest --no-watch && start-server-and-test dev http-get://0.0.0.0:5173 e2e"
+    "ci:test": "vitest --no-watch && start-server-and-test dev http://localhost:5173 e2e:ci"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.12.0",
@@ -38,6 +39,7 @@
     "globals": "^17.6.0",
     "jsdom": "^29.1.1",
     "vite": "^8.0.12",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.10",
+    "wait-on": "^9.0.10"
   }
 }
